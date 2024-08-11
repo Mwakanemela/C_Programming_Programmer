@@ -19,5 +19,10 @@ int main()
  }
 
  printf("a count is %d\n", count_a);
+
+ char nameCopy[32];
+ strcpy(nameCopy, myName);
+
+ printf("name copy is: %s\n", nameCopy);
  return 0;
 }
