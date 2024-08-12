@@ -14,5 +14,17 @@ int main()
 
  fprintf(fh_output, "name: %s\n", name); 
  fclose(fh_output);
+
+ FILE *fh_input;
+ fh_input = fopen("my_file.txt", "r");
+
+ char data[32];
+ 
+ while(fscanf(fh_input, "%s", &data) != EOF)
+ {
+  printf("%s\n", data);
+ }
+
+ fclose(fh_input);
  return 0;
 }
