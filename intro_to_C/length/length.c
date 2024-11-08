@@ -1,7 +1,7 @@
 /*******************************
 
 - length.c : reads a line from keyboard and reports its length 
-	     -it reads including spaces and add 1 for end-of-string char = '\0'
+	     -it reads including spaces and add 1 for new line char = '\n'
 
 - Author   : Mwakanemela Kayange
 
