@@ -36,9 +36,12 @@ int peek(struct stack *s) {
 int pop(struct stack *s) {
 	if(s->size > 0) {
 		int val = s->top->value; //get top value
+		struct node *topNode = s->top;
+		
 		s->top = s->top->next; //point top to the next value in stack
 		s->size--; //decrease the size
 		
+		free(topNode);
 		return val;
 	}else {
 		printf("Invalid pop operation because there is nothing in the stack\n");
