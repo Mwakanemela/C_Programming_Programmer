@@ -23,3 +23,28 @@ void push(struct stack *s, int val) {
 		s->size++;
 	}
 }
+
+int peek(struct stack *s) {
+	if(s->size > 0) {
+		return s->top->value;
+	}else {
+		printf("Invalid peek operation because there is nothing in the stack\n");
+		return -1;
+	}
+}
+
+int pop(struct stack *s) {
+	if(s->size > 0) {
+		int val = s->top->value; //get top value
+		s->top = s->top->next; //point top to the next value in stack
+		s->size--; //decrease the size
+		
+		return val;
+	}else {
+		printf("Invalid pop operation because there is nothing in the stack\n");
+		return -1;
+	}
+
+}
+
+
