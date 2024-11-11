@@ -1,0 +1,19 @@
+#----------------------------------------------------
+
+	Makefile for Unix systems
+	Using a GNU C Compiler (gcc)
+#------------------------------------------------------
+
+CC=gcc
+CFLAGS=-g
+
+#
+# Compiler flags:
+#	-g: enable debugging
+#
+
+m_calculator: m_calculator.c
+	$(CC) $(CFLAGS) -o m_calculator m_calculator.c
+	
+clean:
+	rm -f m_calculator
