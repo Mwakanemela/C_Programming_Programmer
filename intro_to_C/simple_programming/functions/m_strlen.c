@@ -9,8 +9,10 @@ int length(char string[]) {
 
 	int index;
 	
-	for(index = 0; string[index] != '\0'; ++index){}
+	for(index = 0; string[index] != '\0'; ++index){
 		//do nothing
+	}
+		
 	return index;
 }
 
